@@ -33,5 +33,8 @@ typedef struct instruction_s
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
+stack_t *_push(stack_t **current, int num);
+void pall (stack_t **head);
 #endif
