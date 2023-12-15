@@ -50,6 +50,7 @@ int main(int argc, char **argv)
 	printf("done\n");
 
 	fclose(input);
+	return (0);
 }
 stack_t *_push(stack_t **current, int num)
 {
@@ -64,12 +65,13 @@ stack_t *_push(stack_t **current, int num)
 }
 void pall (stack_t **head)
 {
+	stack_t *current;
 	if (*head == NULL)
 	{
 		perror("Stack is empty");
 		return;
 	}
-	stack_t *current = *head;
+	current = *head;
 	while (current != NULL)
 	{
 		printf("%d\n",current->n);
